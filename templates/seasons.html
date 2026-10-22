@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Seasons Page</h2>
+
+    <p>The current month is {{month}}</p>
+    <p>The current year is {{year}}</p>
+
+    {% if month in ["March", "April", "May"] %}
+        <p>It's springtime! 🌧️</p>
+    {% elif month in ["June", "July", "August"] %}
+        <p>It's summer! 🌞</p>
+    {% elif month in ["September", "October", "November"] %}
+        <p>It's fall! 🍂</p>
+    {% else %}
+        <p>It's winter! ☃️</p>
+    {% endif %}
+{% endblock content %}

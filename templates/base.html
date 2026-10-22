@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bird App</title>
+
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='styles/style.css')}}"
+    />
+  </head>
+  <body>
+    <h1>Bird App</h1>
+
+    {% block content %} {% endblock content %}
+
+<div class="navigation">
+  <ul>
+    <li>
+      <a href="{{url_for('home')}}">
+        <p>Home</p>
+      </a>
+    </li>
+    <li>
+      <a href="{{url_for('birdPage')}}">
+        <p>Birds</p>
+      </a>
+    </li>
+    <li>
+      <a href="{{url_for('seasonsPage')}}">
+        <p>Seasons</p>
+      </a>
+    </li>
+  </ul>
+</div>
+  </body>
+</html>
