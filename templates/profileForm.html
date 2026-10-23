@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {%block content%}
+<h2>Profile Form</h2>
+<form method="POST">
+  <div>
+    <label for="name">Name *:</label>
+    <input type="text" id="name" name="name" required />
+  </div>
+  <div>
+    <label for="email">Email *:</label>
+    <input type="email" id="email" name="email" required />
+  </div>
+  <div>
+    <label for="quan">Number of Guests *:</label>
+    <input type="number" id="quan" name="quan" min="{{minGuests if minGuests else 1}}"
+      max="{{maxGuests if maxGuests else 10}}" required />
+  </div>
+  <div>
+    <label for="rel">Relationship *:</label>
+    <select id="rel" name="rel" required>
+      <option value="">Please select your relationship to me:</option>
+      <option value="parent">Parent/Parent-in-Law</option>
+      <option value="sibling">Sibling/Sibling-in-Law</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <div>
+    <label for="comments">Comments:</label>
+    <textarea name="comments" id="comments" placeholder="Please share any comments here:" rows="4"></textarea>
+  </div>
+  <div>
+    <label for="accommodations">Accommodations Required?:</label>
+    <input type="checkbox" id="accommodations" name="accommodations" value="yes" />
+  </div>
+  <button type="submit">Submit Profile</button>
+</form>
+{%endblock content%}

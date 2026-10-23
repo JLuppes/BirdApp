@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<h2 class="success">Profile Success!</h2>
+
+<p><strong>Name:</strong> {{name}}</p>
+<p><strong>Email:</strong> {{email}}</p>
+<p><strong>Number of Guests:</strong> {{quan}}</p>
+<p><strong>Relationship:</strong> {{"Parent/Parent-in-Law" if rel == "parent" else rel}}</p>
+<p><strong>Comments:</strong> {{comments if comments else "No comments provided."}}</p>
+<p><strong>Accommodations Required:</strong> {{"Yes" if accommodations else "No"}}</p>
+{%endblock content%}
