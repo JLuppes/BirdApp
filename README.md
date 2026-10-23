@@ -2,6 +2,10 @@
 
 This is a super basic Flask application with four pages.
 
+## AddProfileForm Branch
+
+This branch adds a Profile submission page, including form and success template, and a view function with route that handles form submission and data validation.
+
 ## Running
 
 - Set up a Python virtual environment
